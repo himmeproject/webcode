@@ -1,0 +1,514 @@
+/* Application styles could go here */
+/**
+ * Colors: 
+ * Blue: 456889
+ */
+ 
+/* Syriac fonts */ 
+
+@CHARSET "ISO-8859-1";
+@font-face {
+	font-family: 'EstrangeloEdessa';
+	src: local('Estrangelo Edessa');
+	src: url('../fonts/syrcomedessa.eot');
+	src: url('../fonts/syrcomedessa.eot?#iefix') format('embedded-opentype'), url('../fonts/syrcomedessa.woff') format('woff'), url('../fonts/syrcomedessa.ttf') format('truetype'), url('../fonts/syrcomedessa.svg#syrcomedessa') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Main content blocks */
+body {font-family: arial, sans-serif; background-color:#000000;}
+#main { padding: 0; background-color:#000000; }
+#main-content-area {background-color:white; padding: 75px 50px 12px;}
+#content{background-color:white; padding-top: 50px;}
+
+/* Removed extra padding introduced by Bootstrap for rows. Was causing issues with background images */
+.row { margin-left: 0px; margin-right: 0px;}
+.container{width:95%; padding:0;}
+
+/* Adds a little extra padding around interior content, useful when for when nav wraps. */
+/*.interior-content {padding:0; padding-top: 50px;}
+.full-page {margin-top:0;}*/
+
+/* Navbar styles*/
+.navbar {border-bottom:4px solid #000000 !important;}
+.navbar .container {padding-top: 3px;}
+.navbar-inner {border-bottom:.5em solid #000000 !important;}
+.navbar-inner .container{height: 45px !important; padding-top:.5em; margin-left:.5em;}
+.navbar-brand {margin-top:-.75em; padding-left:0; margin-left:0; margin-right:-2em;}
+.navbar-brand img {padding:0; margin:0; }
+
+.brand {margin-top:-.75em; margin-left:40px;padding-left:0;}
+.brand img {margin-left:1.5em;padding-left:0;}
+
+.navbar-inner .nav > li > a:hover, .advanced-search > a:hover {
+        border-bottom: 4px solid #FFFFFF !important;  
+}
+.navbar-inner > .container > .nav > li.selected {border-bottom: 4px solid #FFFFFF !important; }
+
+.navbar-input-group {
+  font-size: 0px; /*removes whitespace between button and input*/
+}
+
+/*.navbar-form {max-width: 350px;}*/
+
+.banner-container {display:inline-block; line-height:2.5em;}
+.banner-icon {font-size:2.5em; display:inline-block; margin-right:.15em;}
+
+ /*
+ * font-family: Tahoma, Geneva, sans-serif;
+ */
+.banner-text {color: #FFFFFF; display:inline-block; /*margin-top:-.95em;*/ vertical-align: middle;  letter-spacing: -1px; font:2.35em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.rec-status {display:block; width:100% !important; margin-bottom:1em; padding:1em;}
+.info-btns {width:100%; margin-bottom:1em;}
+
+/* Footer styles */
+footer {text-align:center; color:white;}
+
+/* Simple background color styles */
+.white {background-color:white;}
+
+/* Block styles */
+.content-block {background-color:#ffffff !important;}
+.top-padding {margin-top:2em;}
+.block {display:block;}
+.banner {font-size: 24px; color:white; background-color:#000000; margin:0 0 1em 0; padding:.5em 1em;; border-bottom:4px solid #000000;}
+
+/* Typography */
+h1 {font-size:1.5em; margin:.25em 0 .25em 0; color:#FFFFFF; font-weight:500;}
+h2 {font-size: 1.25em; margin:1em 0 .25em 0; padding-bottom:0; color:#FFFFFF; font-weight:500;}
+h3 {font-size: 1.2em; margin:1em 0 .25em 0; padding-bottom:0; color:#FFFFFF; font-weight:500;  padding-bottom:0; margin-bottom:1em;}
+h3.banner-solid {color:white;}
+h3.underline {color:#FFFFFF; border-bottom:3px solid #000000; padding-bottom:-.75em; margin-bottom:1em; margin-top:0;}
+h4 {font-size: 1em; margin:0 0 .25em 0; padding-bottom:0; font-weight:bold;}
+h3.label {
+    background-color:#FFFFFF;
+    line-height: 1.2em;
+    font-size: 2em;
+    float:left;
+}
+h3.syr{
+    margin-right:.75em;
+    margin-top:.5em;
+    float:right !important;
+}
+h4 {font-size: 1em; margin-top:1em;}
+
+.hi {background-color:white;}
+
+.white-link{color:white;}
+
+.white-link:focus, .white-link:active:focus, .white-link.active:focus {
+    outline: 0 none;
+    color:white;
+}
+
+.transparent {
+    /* default fallback */
+    background: rgb(255, 255, 255) transparent;
+    /* nice browsers */
+    background: rgba(255, 255, 255, 0.8);
+    
+}
+
+.URI-display {margin:0 1em 1em; color: #999999;}
+
+/* Table styles*/
+table {width:100% !important; /*border-collapse:collapse;*/ font-size:1em; margin-top:1.5em;}
+
+th {
+    vertical-align:top;
+    padding-bottom:.25em;
+    padding-top:.25em;
+    padding-left:.5em;
+    padding-right:.5em;
+	/* included for the sortable headers to prevent the sorting arrows from breaking onto a separate line, which tends to look ridiculous and doesn't help much at all with space-saving.*/
+	white-space: nowrap;
+}
+/* Exception to the white-space nowrap rule is made for the unsorted column, which should be allowed to word-wrap if necessary.*/
+th.sorttable_nosort{
+	white-space: normal;
+}	
+td {
+    vertical-align:top;
+    padding-bottom:.75em;
+    padding-top:.75em;
+    padding-left:.5em;
+    padding-right:1.25em;
+}
+
+table.sortable th::after, th.sorttable_sorted::after, th.sorttable_sorted_reverse::after {
+  content: " ";
+  display: inline-block;
+  width: 7px;
+  height: 11px;
+}
+th.sorttable_sorted::after {
+  background: url(../img/down-arrow.png);
+  background-size: contain;
+}
+th.sorttable_sorted_reverse::after {
+  background: url(../img/up-arrow.png);
+  background-size: contain;
+}
+/* Sortable table arrows to appear on non-sorted columns */
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {   
+  background: url(../img/arrows.png);
+  background-size: contain;
+}
+
+/*
+/* Add space so when one of the sortable arrows vanishes, it does not change column width 
+table.sortable th.sorttable_sorted:after { 
+    content: "\00a0\00a0\00a0" 
+}
+table.sortable th.sorttable_sorted_reverse:after { 
+    content: "\00a0\00a0\00a0" 
+}
+*/
+
+/* HIMME CHECK HERE */
+/* Lables */
+/*.rel-label {font-size:1.05em; background-color:none; color:#666; font-weight:500; margin:0; padding:0;}
+.rel-list {padding:0; margin-left:1em;}
+.srp-label {background-color:none; color:#333; font-weight:500;}
+.sort-title {background-color:none; color:#666; font-weight:500; display:block; }
+.textBox {display:block;}
+.caveat, .note {font-size: .785em; font-style:italic; margin-top:-.5em; padding-top:0;}
+.title {border-bottom:2px solid #000000;margin-bottom:1em; margin-top:0;padding:0;}
+.about {padding-top: .5em; border-bottom:2px solid #666666;margin-bottom:1em;}
+.caption{text-align:center; font-size:.75em;color:grey;}
+.funding {margin:1em;}
+.no-logo {font-size:1.25em; font-weight:600; font-family:serif; color:#333; margin:1em;}
+.label, .badge {white-space: normal;}
+.about-tables td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; 
+}*/
+.well-white {background-color:white;}
+.section {background-color:white; margin:0 2em;}
+.left-padding{padding-left:1em;}
+.top-padding{padding-top:1em;}
+.right-padding{padding-right:1em;}
+.bottom-padding{padding-bottom:1em;}
+.indent{padding-left:1em;}
+/*.section ul {padding-left:0;}*/
+.section.type ul {padding-left:0;}
+
+/* map */
+.browse-map {margin:0;}
+.inline-map {margin-left:-2em; margin-bottom:1em;}
+.map-lg #map {height:400px !important;}
+.map-md #map {height:300px !important;}
+.map-sm #map {height:250px !important;}
+#map {height:275px !important;}
+.map-pop-title {display:inline block;font-weight:600; font-size:1.2em; margin-bottom:0; padding-bottom:0;}
+.map-pop-desc {display:block; padding:.5em;}
+#map-data {margin-bottom: 1em;}
+
+/* footnote styles */
+.footnote-refs, .footnote-tgt, .tei-footnote-tgt, .tei-footnote-ref {
+    font-size: .7em;
+    line-height: 0.5em;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+
+}
+@media (max-width: 600px){
+	.footnote-refs, .footnote-tgt, .tei-footnote-tgt, .tei-footnote-ref {
+		font-size: 0.85em;
+		line-height: 100%;
+		vertical-align: baseline;
+		position: relative;
+		top: -0.4em;
+	}
+}
+
+.footnote-tgt, .tei-footnote-tgt {
+    margin-left:-1.5em;
+    padding-right:.5em;    
+}
+
+/*.footnote-links {float:right; overflow:hidden; clear:right;}*/
+.footnote-icon {
+    padding-left:.5em; 
+    font-size:12px; 
+    line-height: 18px;
+    vertical-align: middle;
+    }
+.footnote-icon .glyphicon-book{
+    padding-left:.75em;
+    line-height: 18px;
+    font-size:16px;
+    margin-top: -0.25em;
+    vertical-align: middle;
+    }
+.bibl li{line-height: 1.5em;padding-bottom:.5em;}
+.bibl-links {padding:.25em; width:25px;}
+.anchor { 
+    display: block;
+    position: relative; 
+    top:-75px !important;
+    /* visibility: hidden; */
+    }
+    
+.anchor:before {
+  content:"";
+  float: left;
+  height: 0px;
+}
+.anchorHighlight {display:block; content:" "; background-color:white; border:1px solid black;}
+
+li:target { 
+	padding-top: 50px;
+	margin-top: -50px;
+	z-index: 0;
+}
+li:target  .footnote {
+	margin-left: -1.5em;
+	padding-left: 1.5em;
+	padding-right: 1em;
+	display: block;
+	border:1px solid black;
+}
+
+.heading-inline {
+	font-weight: bold;
+}
+
+
+/* styles for languages and scripts */
+:lang(en) {
+	font-family: arial, sans-serif;
+}
+
+:lang(syr),:lang(syc) {
+ font-family: "EstrangeloEdessa", "Estrangelo Edessa", Verdana, Arial, Helvetica, sans-serif;
+  /*font-size:large;*/
+  font-size:1.25em; 
+  line-height:1em;
+  
+}
+
+:lang(syr-Syrj), :lang(syc-Syrj) {
+ font-family: "SertoBatnan", "Serto Batnan", Verdana, Arial, Helvetica, sans-serif;
+  font-size:1.25em; 
+  line-height:1em;
+ 
+}
+
+:lang(syr-Syre), :lang(syc-Syre) {
+ font-family: "EastSyriacAdiabene", "East Syriac Adiabene", Verdana, Arial, Helvetica, sans-serif;
+ font-size:1.25em; 
+ line-height:1em;
+
+}
+
+:lang(ar) {
+ font-family: arial, sans-serif;
+ font-size:1.25em; 
+ line-height:1em;
+ 
+}
+
+:lang(fa) {
+ font-family: arial, sans-serif;
+ font-size:1.25em; 
+ line-height:1em;
+ 
+}
+
+
+/* link icon styles (inline) */
+.copy {font-size:1.125em; color:black; padding: .035em .2em; margin-right:1em; margin-bottom: 0; box-shadow: 2px 2px 2px #FFFFFF;}
+.copy-sm {font-size:.75em; color:black; padding: .02em .1em; margin-left:1em; margin-bottom: .25em; box-shadow: 2px 2px 2px #FFFFFF;}
+#link-icons{padding:0; margin-bottom:0;}
+#link-icons a {
+    display:inline-block; 
+    padding-right: .5em; 
+    }
+#link-icons > a > img {
+		box-shadow: 2px 2px 2px #FFFFFF;
+}
+
+#link-icons > a > img[title~="Pleiades"] {
+		border-radius: 12px;	
+}
+
+#link-icons > a > img[title~="Wikipedia"], 
+#link-icons > a > img[title~="Maps"], 
+#link-icons > a > img[title~="Atom"], 
+#link-icons > a > img[title~="TEI"] {
+		border-radius: 0px;
+}
+
+#link-icons > a > img:hover {
+		box-shadow: none;
+}
+.label {font-size: 1em;}
+
+#sources ul {
+	list-style-type: none;
+	padding-left: -0.1em;
+	text-indent: -1em;
+}
+#sources ul ul {
+	list-style-type: disc;
+	padding-left: -0.1em;
+	text-indent: 1em;
+}
+
+#externals {
+	margin-top: 1em;
+}
+
+dt {
+	margin-top: 1.5em;
+}
+dd {
+	margin-top: 0.5em;
+}
+
+div[id|=place] h3 {
+	font-size: medium;
+}
+div[id|=place] > div:first-of-type {
+	width: 30%;
+	float: right;
+	padding: 1em;
+	padding-top: 0;
+	background-color: #FFFFFF;
+}
+div[id|=place] > div:first-of-type > h3, div[id|=place] > div:first-of-type + div > h3 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+div[id|=place] > div:last-of-type {
+	margin-bottom: 3em;
+}
+
+#description li:first-letter {
+	text-transform: capitalize;
+}
+
+.pubPlace > .placeName {
+	font-weight: normal;
+}
+
+/* -- leafletjs styles -- 
+.leaflet-control-layers-list {
+  max-height: 350px;
+  overflow: auto !important;
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+}*/
+
+.leaflet-control-layers-toggle:after{ 
+    display:block;
+    content:"Map options";
+    font-size:small;
+    color:#000 ;
+    float:left;
+    margin-left:3em;
+}
+.leaflet-control-layers-toggle{ 
+    width:125px !important;
+    background-position: 3px 3px !important;
+    text-decoration:none;
+    line-height:36px;
+
+} 
+/*
+.modal {
+    width: 50% !important; 
+    margin-left:-25%;  
+}
+*/
+#map {height: 200px;}
+
+/* Citation styles */
+/*
+analytic
+monographic
+journal
+series
+unpublished
+*/
+.title-journal, .title-monographic{font-style:italic;}
+
+
+/* API documentation */
+pre code {
+	line-height: 1.6em;
+	font-size: 11px;
+	}
+	
+pre {
+	padding: 0.1em 0.5em 0.3em 0.7em;
+	border-left: 11px solid #000000;
+	margin: 1.7em 0 1.7em 0.3em;
+	overflow: auto;
+	width: 93%;
+	max-width:inherit;
+	white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}
+	
+code.inline{
+    display:inline;
+	padding: 0.1em 0.5em 0.3em 0.7em;
+	border-left: 11px solid #000000;
+	margin: 1.7em 0 1.7em 0.3em;
+	overflow: auto;
+	max-width:inherit;
+	white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}	
+.api-path {width:15%}
+.api-param {width:20%}
+.api-desc {width:55%}
+.api-method {width:10%}
+
+/* Application styles could go here */
+/*
+ * Colors:
+ * Dark red: 753C28
+ * Dark orange: B3522B
+ * Light orange: E69849
+ * Pale tan: F5F2E9
+ * Dark Blue: 456889
+ * Blue/grey: A2B1B9
+ * Light Blue: DDEAF1
+ * Dark Grey #333
+ * Light Grey (text): #999
+ */
+body {background-color:#000000;}
+#main {background-color:#FFFFFF;}
+.navbar {border-bottom:4px solid #000000 !important;}
+.banner-interior {border-bottom:.5em solid #000000 !important;}
+.banner-text {color:#000000;}
+/* Main content blocks */
+
+/* Typography */
+h1 {color:#000000; padding-top:1em;}
+h2 {color:#000000;}
+h3 {color:#000000; border-bottom:1px solid grey;}
+h3.paging {display:block;font-weight:500; color:#000000; border-bottom:none;}
+h3.underline {color:#000000; border-bottom:3px solid #000000;}
+#map {height: 180px;}
+
+#placenames .placeName {font-weight: bold;}
+
+/* TEI styles */
+.tei-note {display:block; margin:1em;}
